@@ -1,0 +1,264 @@
+header  {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1); /* Light color with transparency */
+    color: #000000;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Agdasima', sans-serif;
+    z-index: 99;
+    
+}
+.header h1{
+  font-size: 25px;
+  margin: 10px 20px;
+  font-weight: bold;
+}
+.logo img {
+    max-height: 50px; /* Adjust this to the appropriate size for your logo */
+    margin-right: 5px;
+}
+.custom{
+  background-color: #d9d9d9;
+}
+@media (max-width: 768px) {
+  header  {
+    height: 70px;
+}
+.header h1{
+  font-size: 20px;
+  margin: 5px 3px;
+  font-weight: bold;
+}
+.gradient-button {
+  font-family: 'Courier New', Courier, monospace;
+  background: #ffba00;
+  border: none;
+  width: fit-content;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  font-weight: bold;
+  bottom: -5%; /* I-center vertically */
+  left: 50%; /* I-center horizontally */
+  transform: translate(-50%, -50%); /* I-center sa gitna */
+
+}
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1px));
+  grid-gap: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.photos .photos-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Maintain a 1:1 aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.photos img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Make the image cover the container */
+  border-radius: 20px;
+}
+
+#logo{
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: -10%;
+ 
+}
+.titlemob{
+  font-family: 'Lilita One', sans-serif;
+  font-size: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  font-weight: bolder;
+  width: 100%;
+ 
+}
+#desc{
+  font-size: 15px;
+  font-style: oblique;
+  font-weight: 200;
+  margin-bottom: 20px;
+
+}
+.icons {
+  display: flex;
+  align-items: center;
+  
+}
+
+.icon img {
+  width: 24px; /* Lapad ng icon */
+  height: 24px; /* Taas ng icon */
+  margin-left: 10px; /* Margin sa kaliwa ng icon */
+}
+/* .last{
+  padding-right: 05px;
+} */
+#head{
+  position: relative;
+  left: 0;
+}
+}
+
+@media (min-width: 800px) {
+  .top-image {
+    position: absolute; 
+    width: 500px; 
+    height: 400px;
+    z-index: 99;
+    border-radius: 10px; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+  header {
+  justify-content: space-between;
+}
+  .photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1px));
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding-top: 50px;
+    
+  }
+  .photos .photos-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Maintain a 1:1 aspect ratio */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .photos img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Make the image cover the container */
+    border-radius: 20px;
+  }
+  .gradient-mob {
+    display: none;
+  }
+  .titlemob{
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    font-weight: bold;
+    width: 100%;
+    font-family: 'Lilita One', sans-serif;
+}
+  #logo{
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: -20%;
+  }
+  #desc{
+    font-size: 15px;
+    font-style: oblique;
+    font-weight: 100;
+  }
+ 
+.gradient-button {
+  font-family: 'Courier New', Courier, monospace;
+  background: #ffba00;
+  border: none;
+  width: fit-content;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  position: absolute;
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: absolute;
+  font-weight: bold;
+  bottom: -4%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); /* I-center sa gitna */
+}
+.icons {
+    display: flex;
+    align-items: center;
+    
+}
+
+.icon img {
+    width: 24px;
+    height: 24px; 
+}
+}
+#changeButton {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#slideshow img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#slideshow img.active {
+  opacity: 1;
+}

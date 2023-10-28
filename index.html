@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="/assets/imgs/logo.png" type="image/png">
+  
+    <title>Garage - Home Page</title>
+</head>
+<body class="custom">
+  <header  class="header">
+    <div id="head" class="icons">
+    <h1>Vehicle</h1>
+    <h1>Shop</h1>
+    <h1 class="last">Support & Service</h1>
+    </div>
+    
+    <div class="icons">
+      <div class="icon">
+          <img src="assets/imgs/icons8-person-48.png" alt="Icon 1">
+      </div>
+      <div class="icon">
+          <img src="assets/imgs/icons8-language-48.png" alt="Icon 2">
+      </div>
+      <div class="icon">
+          <img src="assets/imgs/icons8-search-50.png" alt="Icon 3">
+      </div>
+  </div>
+  </header>
+  <div class="contentmob">
+    <div class="photos">
+      <div class="photos-container custom" id="logo">
+          <img src="assets/imgs/logo.png" alt="Image">
+          <div class="titlemob">
+            Madam Garage
+              <div id="desc">
+                2025 Best Selling Garage in Philippines
+                
+              </div>
+          </div>
+          <a href=""><button  class="gradient-button">RESERVE NOW</button>
+      </div>
+      
+      <div class="photos-container">
+            <div id="slideshow" class="top-image">
+              <!-- <img id="clickableImage" src="assets/imgs/raptor.png"> -->
+              <img id="clickableImage" src="assets/imgs/ferarri.png">
+              <img id="clickableImage" src="assets/imgs/raptor.png">
+              <img id="clickableImage" src="assets/imgs/jeep-wrangler-nighteagle-4door-hydro-blue.jpg.img_.2880-removebg-preview.png">
+              <img id="clickableImage" src="assets/imgs/2020-kawasaki-zx-14r-green-philippines-5e563a521fb57-removebg-preview.png">
+            </div>  
+      </div>
+        
+    </div>
+  
+   
+   </div> 
+<script>
+  const clickableImage = document.getElementById('clickableImage');
+
+clickableImage.addEventListener('click', function() {
+    // Palitan ang larawan ng image
+    clickableImage.src = 'assets/imgs/gt.png';
+});
+const images = document.querySelectorAll('#slideshow img');
+let currentImageIndex = 0;
+
+function showImage(index) {
+    images.forEach((image, i) => {
+        image.classList.remove('active');
+        if (i === index) {
+            image.classList.add('active');
+        }
+    });
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+}
+
+setInterval(nextImage, 5000); // Ito ay magpapalit ng image bawat 3 segundo
+
+// Initial display
+showImage(currentImageIndex);
+
+</script>
+
+</body>
+</html>
